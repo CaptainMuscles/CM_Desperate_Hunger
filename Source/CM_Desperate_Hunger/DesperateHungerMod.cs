@@ -23,7 +23,7 @@ namespace CM_Desperate_Hunger
 
         public override string SettingsCategory()
         {
-            return "Desperate Prey";
+            return "Desperate Hunger";
         }
 
         public override void DoSettingsWindowContents(Rect inRect)
