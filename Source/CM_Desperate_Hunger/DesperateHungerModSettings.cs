@@ -10,7 +10,9 @@ namespace CM_Desperate_Hunger
 
         public float minimumMalnutritionToHuntHealthyTarget = 0.2f;
 
-        public bool desperateAnimalsIgnoreSize = true;
+        public bool desperatePredatorsIgnoreSize = true;
+        public bool desperatePreyIgnoreSize = true;
+        public bool desperatePreyTargetRandomly = false;
         public bool desperateAnimalsIgnoreCombatPower = true;
         public bool desperateHerdAnimalsEatOwnKind = true;
 
@@ -20,7 +22,9 @@ namespace CM_Desperate_Hunger
 
             Scribe_Values.Look(ref featureEnabled, "featureEnabled", true);
 
-            Scribe_Values.Look(ref desperateAnimalsIgnoreSize, "desperateAnimalsIgnoreSize", true);
+            Scribe_Values.Look(ref desperatePredatorsIgnoreSize, "desperatePredatorsIgnoreSize", true);
+            Scribe_Values.Look(ref desperatePreyIgnoreSize, "desperatePreyIgnoreSize", true);
+            Scribe_Values.Look(ref desperatePreyTargetRandomly, "desperatePreyTargetRandomly", false);
             Scribe_Values.Look(ref desperateAnimalsIgnoreCombatPower, "desperateAnimalsIgnoreCombatPower", true);
             Scribe_Values.Look(ref desperateHerdAnimalsEatOwnKind, "desperateHerdAnimalsEatOwnKind", true);
 
@@ -36,7 +40,9 @@ namespace CM_Desperate_Hunger
 
             listing_Standard.CheckboxLabeled("CM_Desperate_Hunger_Settings_Feature_Enabled_Label".Translate(), ref featureEnabled, "CM_Desperate_Hunger_Settings_Feature_Enabled_Tooltip");
 
-            listing_Standard.CheckboxLabeled("CM_Desperate_Hunger_Settings_Desperate_Animals_Ignore_Size_Label".Translate(), ref desperateAnimalsIgnoreSize, "CM_Desperate_Hunger_Settings_Desperate_Animals_Ignore_Size_Tooltip");
+            listing_Standard.CheckboxLabeled("CM_Desperate_Hunger_Settings_Desperate_Predators_Ignore_Size_Label".Translate(), ref desperatePredatorsIgnoreSize, "CM_Desperate_Hunger_Settings_Desperate_Predators_Ignore_Size_Tooltip");
+            listing_Standard.CheckboxLabeled("CM_Desperate_Hunger_Settings_Desperate_Prey_Ignore_Size_Label".Translate(), ref desperatePreyIgnoreSize, "CM_Desperate_Hunger_Settings_Desperate_Prey_Ignore_Size_Tooltip");
+            listing_Standard.CheckboxLabeled("CM_Desperate_Hunger_Settings_Desperate_Prey_Select_Random_Label".Translate(), ref desperatePreyTargetRandomly, "CM_Desperate_Hunger_Settings_Desperate_Prey_Select_Random_Tooltip");
             listing_Standard.CheckboxLabeled("CM_Desperate_Hunger_Settings_Desperate_Animals_Ignore_Combat_Power_Label".Translate(), ref desperateAnimalsIgnoreCombatPower, "CM_Desperate_Hunger_Settings_Desperate_Animals_Ignore_Combat_Power_Tooltip");
             listing_Standard.CheckboxLabeled("CM_Desperate_Hunger_Settings_Desperate_Herd_Animals_Eat_Own_Kind_Label".Translate(), ref desperateHerdAnimalsEatOwnKind, "CM_Desperate_Hunger_Settings_Desperate_Herd_Animals_Eat_Own_Kind_Tooltip");
 

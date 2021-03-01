@@ -136,7 +136,11 @@ namespace CM_Desperate_Hunger
                 {
                     return false;
                 }
-                if (!DesperateHungerMod.settings.desperateAnimalsIgnoreSize && prey.BodySize > predator.RaceProps.maxPreyBodySize)
+                if (!DesperateHungerMod.settings.desperatePredatorsIgnoreSize && predator.RaceProps.predator && prey.BodySize > predator.RaceProps.maxPreyBodySize)
+                {
+                    return false;
+                }
+                if (!predator.RaceProps.predator && ((DesperateHungerMod.settings.desperatePreyTargetRandomly || !DesperateHungerMod.settings.desperatePreyIgnoreSize) && prey.BodySize > predator.BodySize))
                 {
                     return false;
                 }
@@ -175,6 +179,9 @@ namespace CM_Desperate_Hunger
             // Copied with minor changes so we don't have to call a private function on the FoodUtility object
             private static float GetPreyScoreFor(Pawn predator, Pawn prey)
             {
+                if (DesperateHungerMod.settings.desperatePreyTargetRandomly && !predator.RaceProps.predator)
+                    return Rand.Value;
+
                 float preyRelativeStrength = prey.kindDef.combatPower / predator.kindDef.combatPower;
                 float preyHealth = prey.health.summaryHealth.SummaryHealthPercent;
                 float bodySizeFactor = prey.ageTracker.CurLifeStage.bodySizeFactor;

@@ -4,8 +4,14 @@
   <CM_Desperate_Hunger_Settings_Feature_Enabled_Label>Feature enabled</CM_Desperate_Hunger_Settings_Feature_Enabled_Label>
   <CM_Desperate_Hunger_Settings_Feature_Enabled_Tooltip>Disable this to turn off feature without needing to uninstall mod</CM_Desperate_Hunger_Settings_Feature_Enabled_Tooltip>
   
-  <CM_Desperate_Hunger_Settings_Desperate_Animals_Ignore_Size_Label>Desperate animals ignore size</CM_Desperate_Hunger_Settings_Desperate_Animals_Ignore_Size_Label>
-  <CM_Desperate_Hunger_Settings_Desperate_Animals_Ignore_Size_Tooltip>If enabled, desperate animals may hunt animals of any size</CM_Desperate_Hunger_Settings_Desperate_Animals_Ignore_Size_Tooltip>
+  <CM_Desperate_Hunger_Settings_Desperate_Predators_Ignore_Size_Label>Desperate predators ignore size</CM_Desperate_Hunger_Settings_Desperate_Predators_Ignore_Size_Label>
+  <CM_Desperate_Hunger_Settings_Desperate_Predators_Ignore_Size_Tooltip>If enabled, desperate predators may hunt animals of any size.</CM_Desperate_Hunger_Settings_Desperate_Predators_Ignore_Size_Tooltip>
+  
+  <CM_Desperate_Hunger_Settings_Desperate_Prey_Ignore_Size_Label>Desperate prey ignore size</CM_Desperate_Hunger_Settings_Desperate_Prey_Ignore_Size_Label>
+  <CM_Desperate_Hunger_Settings_Desperate_Prey_Ignore_Size_Tooltip>If enabled, desperate normally non-predatory animals may hunt animals of any size. If disabled, they will only hunt animals their own size or smaller.</CM_Desperate_Hunger_Settings_Desperate_Prey_Ignore_Size_Tooltip>
+  
+  <CM_Desperate_Hunger_Settings_Desperate_Prey_Select_Random_Label>Desperate prey select random targets</CM_Desperate_Hunger_Settings_Desperate_Prey_Select_Random_Label>
+  <CM_Desperate_Hunger_Settings_Desperate_Prey_Select_Random_Tooltip>If enabled, desperate normally non-predatory animals will pick a target at random (always equal size to themself or smaller). If disabled, they prioritize targets using the same formula as predators (and may attack larger creatures if the previous setting is enabled).</CM_Desperate_Hunger_Settings_Desperate_Prey_Select_Random_Tooltip>
   
   <CM_Desperate_Hunger_Settings_Desperate_Animals_Ignore_Combat_Power_Label>Desperate animals ignore combat power</CM_Desperate_Hunger_Settings_Desperate_Animals_Ignore_Combat_Power_Label>
   <CM_Desperate_Hunger_Settings_Desperate_Animals_Ignore_Combat_Power_Tooltip>If enabled, desperate animals may hunt animals regardless of the targets combat power</CM_Desperate_Hunger_Settings_Desperate_Animals_Ignore_Combat_Power_Tooltip>
