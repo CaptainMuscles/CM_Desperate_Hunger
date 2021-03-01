@@ -1,3 +1,11 @@
+## [1.0.1] - 2021-03-01
+
+### Added
+- Optional feature to keep creatures from eating raw fertilized eggs.
+- Optional feature to allow civilized humans to kill things in desperation.
+- Slider to choose when wounded targets will be attacked in desperation.
+
+
 ## [1.0.0] - 2021-02-28
 
 ### Added
