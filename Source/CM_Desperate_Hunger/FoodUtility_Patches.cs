@@ -24,10 +24,16 @@ namespace CM_Desperate_Hunger
             [HarmonyPostfix]
             public static void Postfix(Pawn p, ThingDef food, ref bool __result)
             {
-                if (!__result && DesperateHungerMod.settings.featureEnabled && p.AnimalOrWildMan() && food.ingestible != null && (food.ingestible.foodType & FoodTypeFlags.Corpse) == FoodTypeFlags.Corpse)
+                if (__result && food != null && DesperateHungerMod.settings.ignoreFertilizedEggs && food.HasComp(typeof(CompHatcher)))
+                {
+                    __result = false;
+                    return;
+                }
+
+                if (!__result && DesperateHungerMod.settings.featureEnabled && (p.AnimalOrWildMan() || DesperateHungerMod.settings.desperateHumans) && food.ingestible != null && (food.ingestible.foodType & FoodTypeFlags.Corpse) == FoodTypeFlags.Corpse)
                 {
                     Hediff malnutrition = p.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Malnutrition);
-                    bool overrideEat = (malnutrition != null);
+                    bool overrideEat = (malnutrition != null && malnutrition.Severity > DesperateHungerMod.settings.minimumMalnutritionToHuntWoundedTarget);
 
                     __result = overrideEat;
                 }
@@ -41,10 +47,16 @@ namespace CM_Desperate_Hunger
             [HarmonyPostfix]
             public static void Postfix(Pawn p, Thing food, ref bool __result)
             {
-                if (!__result && DesperateHungerMod.settings.featureEnabled && p.AnimalOrWildMan() && food.def.ingestible != null && (food.def.ingestible.foodType & FoodTypeFlags.Corpse) == FoodTypeFlags.Corpse)
+                if (__result && food != null && DesperateHungerMod.settings.ignoreFertilizedEggs && food.def.HasComp(typeof(CompHatcher)))
+                {
+                    __result = false;
+                    return;
+                }
+
+                if (!__result && DesperateHungerMod.settings.featureEnabled && (p.AnimalOrWildMan() || DesperateHungerMod.settings.desperateHumans) && food.def.ingestible != null && (food.def.ingestible.foodType & FoodTypeFlags.Corpse) == FoodTypeFlags.Corpse)
                 {
                     Hediff malnutrition = p.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Malnutrition);
-                    bool overrideEat = (malnutrition != null);
+                    bool overrideEat = (malnutrition != null && malnutrition.Severity > DesperateHungerMod.settings.minimumMalnutritionToHuntWoundedTarget);
 
                     __result = overrideEat;
                 }

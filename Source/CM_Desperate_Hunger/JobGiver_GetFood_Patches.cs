@@ -27,7 +27,7 @@ namespace CM_Desperate_Hunger
             public static void Postfix(Pawn pawn, JobGiver_GetFood __instance, ref Job __result)
             {
                 // Don't need to do this if TryGiveJob was already successful, or if the animal is not starving
-                if (__result != null || !DesperateHungerMod.settings.featureEnabled || pawn.needs.food.CurCategory != HungerCategory.Starving)
+                if (__result != null || !DesperateHungerMod.settings.featureEnabled || pawn.needs.food.CurCategory != HungerCategory.Starving || (!DesperateHungerMod.settings.desperateHumans && !pawn.AnimalOrWildMan()))
                     return;
 
                 // Find something to eat
@@ -35,15 +35,14 @@ namespace CM_Desperate_Hunger
 
                 if (prey != null)
                 {
-                    float preyHealth = prey.health.summaryHealth.SummaryHealthPercent;
-                    bool willAttack = preyHealth < 0.99f;
+                    Hediff malnutrition = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Malnutrition);
+                    float malnutritionLevel = (malnutrition == null) ? 0.0f : malnutrition.Severity;
 
-                    // If the prey is healthy, only attack if we are malnourished enough
-                    if (!willAttack)
-                    {
-                        Hediff malnutrition = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Malnutrition);
-                        willAttack = (malnutrition != null && malnutrition.Severity > DesperateHungerMod.settings.minimumMalnutritionToHuntHealthyTarget);
-                    }
+                    float preyHealth = prey.health.summaryHealth.SummaryHealthPercent;
+                    bool preyWounded = preyHealth < 0.99f;
+
+                    // Check if malnourish enough to attack target
+                    bool willAttack = (malnutritionLevel > DesperateHungerMod.settings.minimumMalnutritionToHuntHealthyTarget || (preyWounded && malnutritionLevel > DesperateHungerMod.settings.minimumMalnutritionToHuntWoundedTarget));
 
                     if (willAttack)
                     {
