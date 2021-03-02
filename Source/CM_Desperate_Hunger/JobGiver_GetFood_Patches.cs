@@ -139,7 +139,7 @@ namespace CM_Desperate_Hunger
                 {
                     return false;
                 }
-                if (!predator.RaceProps.predator && ((DesperateHungerMod.settings.desperatePreyTargetRandomly || !DesperateHungerMod.settings.desperatePreyIgnoreSize) && prey.BodySize > predator.BodySize))
+                if (!predator.RaceProps.predator && !DesperateHungerMod.settings.desperatePreyIgnoreSize && prey.BodySize > predator.BodySize * DesperateHungerMod.settings.preyTargetMaxRelativeSize)
                 {
                     return false;
                 }
