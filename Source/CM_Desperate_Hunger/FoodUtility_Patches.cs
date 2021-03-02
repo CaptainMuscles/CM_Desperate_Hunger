@@ -24,7 +24,7 @@ namespace CM_Desperate_Hunger
             [HarmonyPostfix]
             public static void Postfix(Pawn p, ThingDef food, ref bool __result)
             {
-                if (__result && food != null && DesperateHungerMod.settings.ignoreFertilizedEggs && food.HasComp(typeof(CompHatcher)))
+                if (__result && food != null && DesperateHungerMod.settings.featureEnabled && DesperateHungerMod.settings.ignoreFertilizedEggs && food.HasComp(typeof(CompHatcher)))
                 {
                     __result = false;
                     return;
@@ -47,7 +47,7 @@ namespace CM_Desperate_Hunger
             [HarmonyPostfix]
             public static void Postfix(Pawn p, Thing food, ref bool __result)
             {
-                if (__result && food != null && DesperateHungerMod.settings.ignoreFertilizedEggs && food.def.HasComp(typeof(CompHatcher)))
+                if (__result && food != null && DesperateHungerMod.settings.featureEnabled && DesperateHungerMod.settings.ignoreFertilizedEggs && food.def.HasComp(typeof(CompHatcher)))
                 {
                     __result = false;
                     return;
