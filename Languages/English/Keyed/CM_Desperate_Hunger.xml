@@ -19,7 +19,7 @@
   <CM_Desperate_Hunger_Settings_Desperate_Humans_Label>Desperate humans</CM_Desperate_Hunger_Settings_Desperate_Humans_Label>
   <CM_Desperate_Hunger_Settings_Desperate_Humans_Tooltip>If enabled, non-wild humans will automatically attack other creatures when desperate.</CM_Desperate_Hunger_Settings_Desperate_Humans_Tooltip>
   
-  <CM_Desperate_Hunger_Settings_Prey_Target_Max_Relative_Size_Label>Random target max relative size</CM_Desperate_Hunger_Settings_Prey_Target_Max_Relative_Size_Label>
+  <CM_Desperate_Hunger_Settings_Prey_Target_Max_Relative_Size_Label>Prey target max relative size</CM_Desperate_Hunger_Settings_Prey_Target_Max_Relative_Size_Label>
   <CM_Desperate_Hunger_Settings_Prey_Target_Max_Relative_Size_Tooltip>The maximum relative size a desperate non-predatory animal can target (unless "desperate prey ignore size" is enabled).</CM_Desperate_Hunger_Settings_Prey_Target_Max_Relative_Size_Tooltip>
   
   <CM_Desperate_Hunger_Settings_Minimum_Malnutrition_Wounded_Label>Minimum malnutrition required to hunt wounded target</CM_Desperate_Hunger_Settings_Minimum_Malnutrition_Wounded_Label>
