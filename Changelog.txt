@@ -1,3 +1,9 @@
+## [1.0.2] - 2021-03-02
+
+### Added
+- Optional feature to allow desperate pawns to attack pawns of same faction.
+
+
 ## [1.0.1] - 2021-03-01
 
 ### Added
