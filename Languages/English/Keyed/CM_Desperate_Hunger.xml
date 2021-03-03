@@ -16,6 +16,9 @@
   <CM_Desperate_Hunger_Settings_Desperate_Herd_Animals_Eat_Own_Kind_Label>Desperate herd animals eat own kind</CM_Desperate_Hunger_Settings_Desperate_Herd_Animals_Eat_Own_Kind_Label>
   <CM_Desperate_Hunger_Settings_Desperate_Herd_Animals_Eat_Own_Kind_Tooltip>If enabled, desperate herd animals may hunt animals of their own kind</CM_Desperate_Hunger_Settings_Desperate_Herd_Animals_Eat_Own_Kind_Tooltip>
   
+  <CM_Desperate_Hunger_Settings_Desperate_Animals_Attack_Allies_Label>Desperate animals attack allies</CM_Desperate_Hunger_Settings_Desperate_Animals_Attack_Allies_Label>
+  <CM_Desperate_Hunger_Settings_Desperate_Animals_Attack_Allies_Tooltip>If enabled, desperate pawns may attack others from the same faction.</CM_Desperate_Hunger_Settings_Desperate_Animals_Attack_Allies_Tooltip>
+  
   <CM_Desperate_Hunger_Settings_Desperate_Humans_Label>Desperate humans</CM_Desperate_Hunger_Settings_Desperate_Humans_Label>
   <CM_Desperate_Hunger_Settings_Desperate_Humans_Tooltip>If enabled, non-wild humans will automatically attack other creatures when desperate.</CM_Desperate_Hunger_Settings_Desperate_Humans_Tooltip>
   

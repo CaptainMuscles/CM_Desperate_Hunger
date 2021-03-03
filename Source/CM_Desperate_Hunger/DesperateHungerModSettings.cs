@@ -15,6 +15,7 @@ namespace CM_Desperate_Hunger
         public bool desperatePreyIgnoreSize = true;
         public bool desperateAnimalsIgnoreCombatPower = true;
         public bool desperateHerdAnimalsEatOwnKind = true;
+        public bool desperateAnimalsAttackAllies = false;
         public bool desperateHumans = false;
 
         public bool ignoreFertilizedEggs = false;
@@ -34,6 +35,7 @@ namespace CM_Desperate_Hunger
             Scribe_Values.Look(ref desperateAnimalsIgnoreCombatPower, "desperateAnimalsIgnoreCombatPower", true);
             Scribe_Values.Look(ref desperateHerdAnimalsEatOwnKind, "desperateHerdAnimalsEatOwnKind", true);
 
+            Scribe_Values.Look(ref desperateAnimalsAttackAllies, "desperateAnimalsAttackAllies", false);
             Scribe_Values.Look(ref desperateHumans, "desperateHumans", false);
 
             Scribe_Values.Look(ref minimumMalnutritionToHuntWoundedTarget, "minimumMalnutritionToHuntWoundedTarget", 0.0f);
@@ -60,6 +62,7 @@ namespace CM_Desperate_Hunger
             listing_Standard.CheckboxLabeled("CM_Desperate_Hunger_Settings_Desperate_Prey_Ignore_Size_Label".Translate(), ref desperatePreyIgnoreSize, "CM_Desperate_Hunger_Settings_Desperate_Prey_Ignore_Size_Tooltip".Translate());
             listing_Standard.CheckboxLabeled("CM_Desperate_Hunger_Settings_Desperate_Animals_Ignore_Combat_Power_Label".Translate(), ref desperateAnimalsIgnoreCombatPower, "CM_Desperate_Hunger_Settings_Desperate_Animals_Ignore_Combat_Power_Tooltip".Translate());
             listing_Standard.CheckboxLabeled("CM_Desperate_Hunger_Settings_Desperate_Herd_Animals_Eat_Own_Kind_Label".Translate(), ref desperateHerdAnimalsEatOwnKind, "CM_Desperate_Hunger_Settings_Desperate_Herd_Animals_Eat_Own_Kind_Tooltip".Translate());
+            listing_Standard.CheckboxLabeled("CM_Desperate_Hunger_Settings_Desperate_Animals_Attack_Allies_Label".Translate(), ref desperateAnimalsAttackAllies, "CM_Desperate_Hunger_Settings_Desperate_Animals_Attack_Allies_Tooltip".Translate());
             listing_Standard.CheckboxLabeled("CM_Desperate_Hunger_Settings_Desperate_Humans_Label".Translate(), ref desperateHumans, "CM_Desperate_Hunger_Settings_Desperate_Humans_Tooltip".Translate());
             
             listing_Standard.GapLine();

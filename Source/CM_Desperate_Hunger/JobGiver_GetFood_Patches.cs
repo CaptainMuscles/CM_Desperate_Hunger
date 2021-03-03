@@ -156,15 +156,15 @@ namespace CM_Desperate_Hunger
                         return false;
                     }
                 }
-                if (predator.Faction != null && prey.Faction != null && !predator.HostileTo(prey))
+                if (!DesperateHungerMod.settings.desperateAnimalsAttackAllies && predator.Faction != null && prey.Faction != null && !predator.HostileTo(prey))
                 {
                     return false;
                 }
-                if (predator.Faction != null && prey.HostFaction != null && !predator.HostileTo(prey))
+                if (!DesperateHungerMod.settings.desperateAnimalsAttackAllies && predator.Faction != null && prey.HostFaction != null && !predator.HostileTo(prey))
                 {
                     return false;
                 }
-                if (predator.Faction == Faction.OfPlayer && prey.Faction == Faction.OfPlayer)
+                if (!DesperateHungerMod.settings.desperateAnimalsAttackAllies && predator.Faction == Faction.OfPlayer && prey.Faction == Faction.OfPlayer)
                 {
                     return false;
                 }
