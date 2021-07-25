@@ -131,7 +131,7 @@ namespace CM_Desperate_Hunger
                 {
                     return false;
                 }
-                if (!Find.Storyteller.difficultyValues.predatorsHuntHumanlikes && prey.RaceProps.Humanlike)
+                if (!Find.Storyteller.difficulty.predatorsHuntHumanlikes && prey.RaceProps.Humanlike)
                 {
                     return false;
                 }
